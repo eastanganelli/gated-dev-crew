@@ -1,6 +1,6 @@
-# Shipwright
+# Gated Dev Crew
 
-**Shipwright** es un equipo de desarrollo para [Claude Code](https://claude.com/claude-code): un **Tech Leader** que planifica y delega, y agentes especializados que implementan, testean, arreglan y documentan. Con guardas anti-loop y tope de subagentes en paralelo.
+**Gated Dev Crew** es un equipo de desarrollo para [Claude Code](https://claude.com/claude-code): un **Tech Leader** que planifica y delega, y agentes especializados que implementan, testean, arreglan y documentan. Con guardas anti-loop y tope de subagentes en paralelo.
 
 ## Qué instala
 
@@ -25,8 +25,8 @@
 ## Instalación
 
 ```bash
-git clone https://github.com/<tu-usuario>/shipwright.git
-cd shipwright
+git clone https://github.com/<tu-usuario>/gated-dev-crew.git
+cd gated-dev-crew
 node install.js --dry-run   # opcional: ver qué hará
 node install.js
 ```
@@ -46,7 +46,7 @@ Reiniciá Claude Code y listo.
 
 ### Seguridad del instalador
 
-- Antes de pisar cualquier archivo, copia el original a `~/.claude/backups/shipwright-<fecha>/`.
+- Antes de pisar cualquier archivo, copia el original a `~/.claude/backups/gated-dev-crew-<fecha>/`.
 - `settings.json` se **fusiona**: no cambia tu modelo, tema, plugins ni permisos previos. Si no es JSON válido, aborta sin tocarlo.
 - `CLAUDE.md`: tus reglas se conservan; las nuestras van en un bloque delimitado que se actualiza al reinstalar.
 - Es idempotente: reinstalar no duplica nada. `--uninstall` quita solo lo que se agregó.
