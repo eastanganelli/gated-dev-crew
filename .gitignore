@@ -1,0 +1,27 @@
+# Dependencias
+node_modules/
+
+# Backups y temporales del instalador
+backups/
+*.tmp-*
+.shipwright.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Entorno / secretos
+.env
+.env.*
+*.pem
+.credentials.json
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# SO
+.DS_Store
+Thumbs.db
+desktop.ini

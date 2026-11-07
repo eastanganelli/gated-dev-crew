@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "deny": [
+      "Agent(Explore)",
+      "Agent(Plan)",
+      "Agent(general-purpose)",
+      "Agent(claude)",
+      "Agent(claude-code-guide)",
+      "Agent(statusline-setup)"
+    ],
+    "denyReads": [
+      "Read(**/node_modules/**)",
+      "Read(**/obj/**)",
+      "Read(**/bin/Debug/**)",
+      "Read(**/bin/Release/**)",
+      "Read(**/build/**)",
+      "Read(**/.dart_tool/**)",
+      "Read(**/.pio/**)",
+      "Read(**/__pycache__/**)",
+      "Read(**/.venv/**)",
+      "Read(**/package-lock.json)",
+      "Read(**/yarn.lock)",
+      "Read(**/pnpm-lock.yaml)",
+      "Read(**/pubspec.lock)",
+      "Read(**/poetry.lock)",
+      "Read(**/*.min.js)",
+      "Read(**/*.map)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      { "matcher": "Bash|Grep|Glob", "command": "loop" },
+      { "matcher": "Agent|Task", "command": "spawn-pre" }
+    ],
+    "PostToolUse": [
+      { "matcher": "Edit|Write", "command": "reset" }
+    ],
+    "SubagentStop": [
+      { "command": "spawn-done" }
+    ]
+  }
+}

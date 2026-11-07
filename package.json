@@ -1,0 +1,10 @@
+{
+  "name": "shipwright",
+  "version": "1.0.0",
+  "description": "Shipwright: equipo de subagentes para Claude Code. Plan → código → tests → fix → docs, con un Tech Leader que delega.",
+  "bin": { "shipwright": "install.js" },
+  "scripts": { "install-agents": "node install.js", "uninstall-agents": "node install.js --uninstall" },
+  "engines": { "node": ">=16" },
+  "license": "MIT",
+  "files": ["install.js", "payload", "README.md", "LICENSE"]
+}
